@@ -1,2 +1,10 @@
 @import "tailwindcss";
-@source "../view/**/*.templ";
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+@source "../../view/**/*.templ";
+
+@theme {
+    --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+    --font-major-mono-display: "Major Mono Display", monospace;
+}

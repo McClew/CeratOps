@@ -5,6 +5,6 @@ import (
 	"net/http"
 )
 
-func DashboardHandler(w http.ResponseWriter, r *http.Request) {
-	view.DashboardPage().Render(r.Context(), w)
+func DashboardHandler(writer http.ResponseWriter, request *http.Request) {
+	view.DashboardPage().Render(request.Context(), writer)
 }
