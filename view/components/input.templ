@@ -1,0 +1,28 @@
+package components
+
+type InputProps struct {
+	Type        string
+	Name        string
+	Label       string
+	Placeholder string
+	Required    bool
+	Value       string
+}
+
+templ Input(props InputProps) {
+	<div class="mb-4">
+		if props.Label != "" {
+			<label class="block text-sm mb-2 text-gray-300">{ props.Label }</label>
+		}
+		<input 
+			type={ props.Type } 
+			name={ props.Name } 
+			value={ props.Value }
+			placeholder={ props.Placeholder }
+			if props.Required {
+				required
+			}
+			class="w-full p-2.5 rounded-lg bg-gray-700/50 border border-gray-600 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all placeholder:text-gray-500"
+		/>
+	</div>
+}

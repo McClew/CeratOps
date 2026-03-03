@@ -1,0 +1,15 @@
+package components
+
+type ButtonProps struct {
+	Type string
+	Text string
+}
+
+templ Button(props ButtonProps) {
+	<button 
+		type={ props.Type } 
+		class="w-full bg-blue-600 hover:bg-blue-500 py-2.5 rounded-lg font-bold transition-all active:scale-[0.98] shadow-lg shadow-blue-900/20"
+	>
+		{ props.Text }
+	</button>
+}
