@@ -1,0 +1,16 @@
+package components
+
+type ErrorMessageProps struct {
+	Title       string
+	Message     string
+}
+
+templ ErrorMessage(props ErrorMessageProps) {
+	<div class="bg-red-900/30 border border-red-500/30 text-red-200 p-4 mb-6 text-sm flex items-start gap-3">
+		<div class="mt-1 w-2 h-2 rounded-full bg-red-500"></div>
+		<div class="flex-1">
+			<p class="font-medium text-red-400 mb-0.5">{ props.Title }</p>
+			<p class="opacity-80">{ props.Message }</p>
+		</div>
+	</div>
+}
