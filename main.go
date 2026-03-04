@@ -32,5 +32,5 @@ func main() {
 	http.HandleFunc("/dashboard", controller.AuthMiddleware(controller.DashboardHandler))
 
 	fmt.Println("CeratOps running at http://localhost:8080")
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":8080", controller.PathMiddleware(http.DefaultServeMux))
 }

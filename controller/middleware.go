@@ -2,6 +2,7 @@ package controller
 
 import (
 	"CeratOps/model"
+	"CeratOps/util"
 	"net/http"
 )
 
@@ -13,4 +14,11 @@ func AuthMiddleware(next http.HandlerFunc) http.HandlerFunc {
 		}
 		next(w, r)
 	}
+}
+
+func PathMiddleware(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		ctx := util.SetPath(r.Context(), r.URL.Path)
+		next.ServeHTTP(w, r.WithContext(ctx))
+	})
 }
