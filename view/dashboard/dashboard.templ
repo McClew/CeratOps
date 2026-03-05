@@ -1,42 +1,17 @@
 package view
 
-import "CeratOps/view/layout"
+import (
+	"CeratOps/view/layout"
+	"CeratOps/view/components"
+)
 
 templ DashboardPage() {
 	@layout.AppLayout("Dashboard") {
-		<div class="p-8">
-			<h1 class="text-3xl font-bold text-blue-400 mb-6">Dashboard</h1>
-			<p class="text-gray-300">Welcome to the CeratOps control center.</p>
-			
-			<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-				<div class="bg-gray-800 p-6 rounded-lg border border-gray-700 shadow-lg">
-					<h2 class="text-xl font-semibold mb-2">Systems</h2>
-					<p class="text-green-400 flex items-center gap-2">
-						<span class="w-2 h-2 rounded-full bg-green-500"></span>
-						All systems operational
-					</p>
-				</div>
-				<div class="bg-gray-800 p-6 rounded-lg border border-gray-700 shadow-lg">
-					<h2 class="text-xl font-semibold mb-2">Users</h2>
-					<p class="text-blue-400 flex items-center gap-2">
-						<span class="w-2 h-2 rounded-full bg-blue-500"></span>
-						12 Active Sessions
-					</p>
-				</div>
-				<div class="bg-gray-800 p-6 rounded-lg border border-gray-700 shadow-lg">
-					<h2 class="text-xl font-semibold mb-2">Logs</h2>
-					<p class="text-yellow-400 flex items-center gap-2">
-						<span class="w-2 h-2 rounded-full bg-yellow-500 animate-pulse"></span>
-						3 Warning Alerts
-					</p>
-				</div>
-			</div>
-
-			<div class="mt-12 pt-8 border-t border-gray-800">
-				<a href="/logout" class="inline-flex items-center px-4 py-2 rounded-lg bg-red-900/20 text-red-400 hover:bg-red-900/40 transition-all font-medium">
-					Sign Out of System
-				</a>
-			</div>
-		</div>
+		@components.ActionHeader(components.ActionHeaderProps{
+			Title: "Dashboard",
+			Description: "[PLACEHOLDER]",
+			ActionTitle: "PLACEHOLDER",
+			ActionURL: "#",
+		})
 	}
 }
