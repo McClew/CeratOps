@@ -1,16 +1,18 @@
 package components
 
-type InputProps struct {
+type InputLabelledProps struct {
 	Type        string
 	Name        string
+	Label       string
 	Placeholder string
 	Required    bool
 	Value       string
 }
 
-templ Input(props InputProps) {
+templ InputLabelled(props InputLabelledProps) {
 <div class="mt-2">
-	<div>
+	<label for={ props.Name } class="block font-major-mono-display text-sm/6 font-bold text-teal-800 dark:text-white">{ props.Label }</label>
+	<div class="mt-1">
 		<input 
 			type={ props.Type } 
 			name={ props.Name } 
