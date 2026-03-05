@@ -129,36 +129,49 @@ templ AppLayout(title string) {
 									@components.NavigationButton(components.NavigationButtonProps{
 										Name: "Dashboard",
 										Url: "/dashboard",
+										Icon: "gauge",
 									})
 								</li>
 								<li>
 									@components.NavigationButton(components.NavigationButtonProps{
 										Name: "Incidents",
 										Url: "/incidents",
+										Icon: "flag",
 									})
 								</li>
 								<li>
 									@components.NavigationButton(components.NavigationButtonProps{
 										Name: "Threat Intel",
 										Url: "/threat-intel",
+										Icon: "user",
 									})
 								</li>
 								<li>
 									@components.NavigationButton(components.NavigationButtonProps{
 										Name: "Clients",
 										Url: "/clients",
+										Icon: "user",
 									})
 								</li>
 								<li>
 									@components.NavigationButton(components.NavigationButtonProps{
 										Name: "Playbooks",
 										Url: "/playbooks",
+										Icon: "book",
 									})
 								</li>
 								<li>
 									@components.NavigationButton(components.NavigationButtonProps{
+										Name: "Team",
+										Url: "/team",
+										Icon: "users",
+									})
+								</li>	
+								<li>
+									@components.NavigationButton(components.NavigationButtonProps{
 										Name: "Settings",
 										Url: "/settings",
+										Icon: "cog",
 									})
 								</li>								
 							</ul>
