@@ -1,7 +1,7 @@
 package controller
 
 import (
-	"CeratOps/view"
+	view "CeratOps/view/dashboard"
 	"net/http"
 )
 

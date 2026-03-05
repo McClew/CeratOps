@@ -30,6 +30,7 @@ func main() {
 
 	// Protected Routes (Wrapped in Middleware)
 	http.HandleFunc("/dashboard", controller.AuthMiddleware(controller.DashboardHandler))
+	http.HandleFunc("/incidents", controller.AuthMiddleware(controller.IncidentsHandler))
 
 	fmt.Println("CeratOps running at http://localhost:8080")
 	http.ListenAndServe(":8080", controller.PathMiddleware(http.DefaultServeMux))

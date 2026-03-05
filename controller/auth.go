@@ -2,7 +2,7 @@ package controller
 
 import (
 	"CeratOps/model"
-	"CeratOps/view"
+	view "CeratOps/view/auth"
 	"net/http"
 	"time"
 
