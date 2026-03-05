@@ -1,0 +1,28 @@
+package components
+
+type ActionHeaderProps struct {
+	Title string
+	Description string
+	ActionTitle string
+	ActionURL string
+}
+
+templ ActionHeader(props ActionHeaderProps) {
+	<div class="border-b border-teal-800 px-4 py-5 sm:px-6">
+		<div class="-mt-4 -ml-4 flex flex-wrap items-center justify-between sm:flex-nowrap">
+			<div class="mt-4 ml-4">
+				<h1 class="text-white text-2xl font-major-mono-display">{ props.Title }</h1>
+				<p class="mt-1 text-sm text-white font-mono">{ props.Description }</p>
+			</div>
+			<div class="mt-4 ml-4 shrink-0">
+				<a 
+					href={ props.ActionURL} 
+					type="button"
+					class="relative inline-flex items-center bg-teal-800 px-3 py-2 text-sm font-semibold text-white hover:bg-teal-500"
+				>
+					{ props.ActionTitle }
+				</a>
+			</div>
+		</div>
+	</div>
+}
