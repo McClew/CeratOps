@@ -28,7 +28,7 @@ func main() {
 	// Public Routes
 	http.HandleFunc("/login", controller.LoginHandler)
 
-	// Protected Routes (Wrapped in Middleware)
+	// Protected Routes
 	http.HandleFunc("/dashboard", controller.AuthMiddleware(controller.DashboardHandler))
 	http.HandleFunc("/incidents", controller.AuthMiddleware(controller.IncidentsHandler))
 
